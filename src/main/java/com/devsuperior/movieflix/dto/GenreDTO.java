@@ -1,9 +1,16 @@
 package com.devsuperior.movieflix.dto;
 
+import com.devsuperior.movieflix.entities.Genre;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+
 public class GenreDTO {
 
     private Long id;
+
     private String name;
+
 
     public Long getId() {
         return id;
@@ -20,4 +27,10 @@ public class GenreDTO {
     public void setName(String name) {
         this.name = name;
     }
+
+    public GenreDTO(Genre entity) {
+        this.id = entity.getId();
+        this.name = entity.getName();
+    }
+
 }
